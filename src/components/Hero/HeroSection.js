@@ -127,8 +127,15 @@ const HomeContent = styled.div`
 `;
 
 const HeroSection = () => (
-  <HeroComponent>
-    <HomeContent className="container" id="home">
+  <HeroComponent data-aos="fade" data-aos-once="true" data-aos-duration="800">
+    <HomeContent
+      className="container"
+      id="home"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+      data-aos-delay="300"
+    >
       <div className="text-1">Hello, My name is</div>
       <div className="text-2">Quang Huy</div>
       <div className="text-3">

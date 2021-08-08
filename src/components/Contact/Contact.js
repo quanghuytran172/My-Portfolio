@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Fade } from "react-reveal";
 
 import ContactData from "./ContactData";
 
@@ -81,45 +80,66 @@ const ButtonSubmit = styled.a`
 `;
 const Contact = () => (
   <ContactContainer className="container" id="contact">
-    <Fade top>
-      <h1 className="text-section">Contact Me</h1>
-      <p className="text-center text-subtitle">What i provide</p>
-    </Fade>
+    <h1
+      className="text-section"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      Contact Me
+    </h1>
+    <p
+      className="text-center text-subtitle"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      What i provide
+    </p>
     <div className="row">
       {ContactData.map(contact => (
-        <div className="col-lg-4 col-md-6" key={contact.id}>
-          <Fade right>
-            <ContactItem>
-              <ion-icon name={contact.iconName} />
-              <ContactTitle>{contact.title}</ContactTitle>
-              <ContactSubTitle>{contact.subTitle}</ContactSubTitle>
-            </ContactItem>
-          </Fade>
+        <div
+          className="col-lg-4 col-md-6"
+          key={contact.id}
+          data-aos="fade-left"
+          data-aos-once="true"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+          <ContactItem>
+            <ion-icon name={contact.iconName} />
+            <ContactTitle>{contact.title}</ContactTitle>
+            <ContactSubTitle>{contact.subTitle}</ContactSubTitle>
+          </ContactItem>
         </div>
       ))}
     </div>
-    <form action="#">
-      <Fade top>
-        <div className="row">
-          <div className="col-lg-6 mt-3">
-            <Input type="text" placeholder="Your Name *" />
-          </div>
-          <div className="col-lg-6 mt-3">
-            <Input type="text" placeholder="Your email *" />
-          </div>
-          <div className="col-lg-12 mt-3">
-            <Input type="text" placeholder="Your Subject..." />
-          </div>
-          <div className="col-lg-12 mt-3">
-            <TextArea type="text" placeholder="Your Message..." />
-          </div>
+    <form
+      action="#"
+      data-aos="fade-down"
+      data-aos-once="true"
+      data-aos-duration="1000"
+      data-aos-delay="400"
+    >
+      <div className="row">
+        <div className="col-lg-6 mt-3">
+          <Input type="text" placeholder="Your Name *" />
         </div>
-        <div className="text-center">
-          <ButtonSubmit type="submit">
-            <span>Send Message</span>
-          </ButtonSubmit>
+        <div className="col-lg-6 mt-3">
+          <Input type="text" placeholder="Your email *" />
         </div>
-      </Fade>
+        <div className="col-lg-12 mt-3">
+          <Input type="text" placeholder="Your Subject..." />
+        </div>
+        <div className="col-lg-12 mt-3">
+          <TextArea type="text" placeholder="Your Message..." />
+        </div>
+      </div>
+      <div className="text-center">
+        <ButtonSubmit type="submit">
+          <span>Send Message</span>
+        </ButtonSubmit>
+      </div>
     </form>
   </ContactContainer>
 );

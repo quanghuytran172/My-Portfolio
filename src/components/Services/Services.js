@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Fade, Zoom } from "react-reveal";
 import ServiceData from "./ServiceData";
 
 const ServiceSection = styled.section`
@@ -40,20 +39,37 @@ const CardDescription = styled.p`
 `;
 const Services = () => (
   <ServiceSection className="container" id="services">
-    <Fade top>
-      <h1 className="text-section">Services</h1>
-      <p className="text-center text-subtitle">What i provide</p>
-    </Fade>
+    <h1
+      className="text-section"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      Services
+    </h1>
+    <p
+      className="text-center text-subtitle"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      What i provide
+    </p>
     <div className="row align-items-center ">
       {ServiceData.map(service => (
-        <div className="col-lg-4 col-md-6" key={service.id}>
-          <Zoom>
-            <CardService>
-              <CardImg src={service.img} alt="webDev" />
-              <CardTitle>{service.title}</CardTitle>
-              <CardDescription>{service.description}</CardDescription>
-            </CardService>
-          </Zoom>
+        <div
+          className="col-lg-4 col-md-6"
+          key={service.id}
+          data-aos="zoom-in"
+          data-aos-once="true"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+        >
+          <CardService>
+            <CardImg src={service.img} alt="webDev" />
+            <CardTitle>{service.title}</CardTitle>
+            <CardDescription>{service.description}</CardDescription>
+          </CardService>
         </div>
       ))}
     </div>

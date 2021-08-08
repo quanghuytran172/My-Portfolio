@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
 import { EducationData, skillData, personalData } from "./AboutData";
 import Education from "./Education";
 import Skills from "./Skills";
@@ -13,6 +12,10 @@ const AboutSection = styled.div`
     letter-spacing: 13px;
     font-weight: 600;
     font-size: 35px;
+  }
+  .animated {
+    animation-duration: 2.5s;
+    /* animation-iteration-count: infinite; */
   }
   @media screen and (max-width: 690px) {
     h3 {
@@ -64,45 +67,66 @@ const Button = styled.a`
 
 const About = () => (
   <AboutSection className="container" id="about">
-    <Fade top>
-      <h1 className="text-section">About Me</h1>
-      <PText className="text-center">My introduction</PText>
-    </Fade>
+    <h1
+      className="text-section"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      About Me
+    </h1>
+    <PText
+      className="text-center"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      My introduction
+    </PText>
     <div className="row align-items-center">
       <div className="col-lg-5 ">
-        <Fade left>
-          <ImgPersonl src={personalData.imgSrc} className="img-fluid" alt="" />
-        </Fade>
+        <ImgPersonl
+          src={personalData.imgSrc}
+          className="img-fluid"
+          alt=""
+          data-aos="fade-right"
+          data-aos-once="true"
+          data-aos-duration="1000"
+        />
       </div>
-      <div className="col-lg-7  ml-5">
-        <Fade right delay={500}>
-          <div>
-            <h3 className="mb-4 mt-4">
-              LET ME
-              <br />
-              INTRODUCE <br />
-              MYSELF
-            </h3>
-            <PText>{personalData.description}</PText>
-          </div>
+      <div
+        className="col-lg-7  ml-5"
+        data-aos="fade-left"
+        data-aos-once="true"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        <div>
+          <h3 className="mb-4 mt-4">
+            LET ME
+            <br />
+            INTRODUCE <br />
+            MYSELF
+          </h3>
+          <PText>{personalData.description}</PText>
+        </div>
 
-          <div className="my-3">
-            <h4 className="mb-3">EXPERIENCE & EDUCATION</h4>
-            {EducationData.map(item => (
-              <Education key={item.id} data={item} />
-            ))}
-          </div>
+        <div className="my-3">
+          <h4 className="mb-3">EXPERIENCE & EDUCATION</h4>
+          {EducationData.map(item => (
+            <Education key={item.id} data={item} />
+          ))}
+        </div>
 
-          <div className="my-3">
-            <h4 className="mb-3">MY SKILLS</h4>
-            {skillData.map(item => (
-              <Skills topic={item.topic} skills={item.skills} key={item.id} />
-            ))}
-          </div>
-          <Button href={personalData.linkCV} className="mt-2">
-            <span>DOWNLOAD CV</span>
-          </Button>
-        </Fade>
+        <div className="my-3">
+          <h4 className="mb-3">MY SKILLS</h4>
+          {skillData.map(item => (
+            <Skills topic={item.topic} skills={item.skills} key={item.id} />
+          ))}
+        </div>
+        <Button href={personalData.linkCV} className="mt-2">
+          <span>DOWNLOAD CV</span>
+        </Button>
       </div>
     </div>
   </AboutSection>

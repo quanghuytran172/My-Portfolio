@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Fade, Zoom } from "react-reveal";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -94,43 +92,57 @@ const Button = styled.a`
 `;
 const Projects = () => (
   <ProjectSection className="container" id="projects">
-    <Fade top>
-      <h1 className="text-section">Projects</h1>
-      <p className="text-center text-subtitle">Some of my recent works</p>
-    </Fade>
-    <Zoom>
-      <Swiper
-        slidesPerView="auto"
-        navigation
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        className="mySwiper"
-      >
-        {projectData.map(project => (
-          <SwiperSlide data-swiper-autoplay="2000" key={project.id}>
-            <div className="row align-items-center py-4">
-              <div className="col-md-5">
-                <ProjectImage
-                  className="img-fluid"
-                  src={project.img}
-                  alt="Project image"
-                />
-              </div>
-              <div className="col-md-7 project-content">
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
-                <Button href={project.demoLink}>Demo</Button>
-              </div>
+    <h1
+      className="text-section"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      Projects
+    </h1>
+    <p
+      className="text-center text-subtitle"
+      data-aos="fade-up"
+      data-aos-once="true"
+      data-aos-duration="800"
+    >
+      Some of my recent works
+    </p>
+    <Swiper
+      slidesPerView="auto"
+      navigation
+      pagination={{
+        clickable: true,
+      }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      className="mySwiper"
+      data-aos="zoom-in"
+      data-aos-once="true"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+    >
+      {projectData.map(project => (
+        <SwiperSlide data-swiper-autoplay="2000" key={project.id}>
+          <div className="row align-items-center py-4">
+            <div className="col-md-5">
+              <ProjectImage
+                className="img-fluid"
+                src={project.img}
+                alt="Project image"
+              />
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Zoom>
+            <div className="col-md-7 project-content">
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <ProjectDescription>{project.description}</ProjectDescription>
+              <Button href={project.demoLink}>Demo</Button>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   </ProjectSection>
 );
 
