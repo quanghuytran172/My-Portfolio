@@ -84,7 +84,7 @@ const Contact = () => (
       className="text-section"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
     >
       Contact Me
     </h1>
@@ -92,7 +92,7 @@ const Contact = () => (
       className="text-center text-subtitle"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
     >
       What i provide
     </p>

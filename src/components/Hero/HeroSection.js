@@ -133,7 +133,7 @@ const HeroSection = () => (
       id="home"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
       data-aos-delay="300"
     >
       <div className="text-1">Hello, My name is</div>

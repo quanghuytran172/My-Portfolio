@@ -71,7 +71,7 @@ const About = () => (
       className="text-section"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
     >
       About Me
     </h1>
@@ -79,7 +79,7 @@ const About = () => (
       className="text-center"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
     >
       My introduction
     </PText>

@@ -96,7 +96,7 @@ const Projects = () => (
       className="text-section"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
     >
       Projects
     </h1>
@@ -104,7 +104,7 @@ const Projects = () => (
       className="text-center text-subtitle"
       data-aos="fade-up"
       data-aos-once="true"
-      data-aos-duration="800"
+      data-aos-duration="1000"
     >
       Some of my recent works
     </p>

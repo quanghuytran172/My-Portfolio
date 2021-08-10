@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import footerBg from "../../assets/img/footer-bg.png";
 
 const FooterContainer = styled.div`
   text-align: center;
   color: #fff;
-  background: url("https://raw.githubusercontent.com/akashyap2013/PortFolio_Website/master/img/footer-bg.png")
-    no-repeat;
+  background: url(${footerBg}) no-repeat;
   padding: 5rem 0;
 `;
 const FooterWrapped = styled.div``;
