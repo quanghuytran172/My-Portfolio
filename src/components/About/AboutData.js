@@ -1,8 +1,9 @@
+import avatarImg from "../../assets/img/avatar.jpg";
+
 export const personalData = {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-  imgSrc:
-    "https://scontent.fhan14-1.fna.fbcdn.net/v/t1.6435-9/117315494_2164588820342692_9043469945103722967_n.jpg?_nc_cat=105&ccb=1-4&_nc_sid=09cbfe&_nc_ohc=jl3EZX1x8skAX-kxBOE&_nc_ht=scontent.fhan14-1.fna&oh=b04bb116bdc0574acf2a1ecc548cce63&oe=61367A68",
+  imgSrc: avatarImg,
   linkCV:
     "https://drive.google.com/file/d/1cdTAq9HU4KXp5awNpA5CgJdyN-pIqJO6/view?usp=sharing",
 };

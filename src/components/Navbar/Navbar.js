@@ -17,9 +17,6 @@ const NavbarComponent = styled.div`
   &.active {
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 10%);
     background-color: #fff;
-    a {
-      color: #111;
-    }
     .text-logo {
       color: #6f4cff;
     }
@@ -60,6 +57,9 @@ const NavMenu = styled.div`
     top: 0;
     a {
       color: #111;
+    }
+    a:hover {
+      color: #6f4cff;
     }
   }
   @media screen and (max-width: 960px) {
