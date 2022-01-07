@@ -23,6 +23,9 @@ const NavbarComponent = styled.div`
     ion-icon {
       color: #111;
     }
+    a {
+      color: #111;
+    }
   }
 `;
 const NavWrapped = styled.div`
@@ -49,6 +52,7 @@ const NavMenu = styled.div`
   a {
     padding: 0 20px;
     transition: 0.2s ease-in-out;
+    color: #fff;
   }
   a:hover {
     color: #6f4cff;
